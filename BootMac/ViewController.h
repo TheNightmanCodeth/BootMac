@@ -22,9 +22,7 @@
 
 - (NSString *)USBList;
 - (NSMutableArray *)getUSB:(NSString *)output;
-- (void)runDD:(NSString *)usb :(NSString *)iso;
 - (void)main:(NSString *)usb :(NSString *)iso;
-- (void)convertISO:(NSString *)iso;
 
 @end
 

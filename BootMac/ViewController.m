@@ -68,7 +68,7 @@ NSArray *usbArray;
     
     //ISOSelecter button was pressed
     //Dispplay a file picker (NSOpenPanel)
-    //Fuck I hate Apple
+    
     NSOpenPanel *filePicker = [NSOpenPanel openPanel];
     //We want to choose an ISO so we allow chooseFiles and not chooseDirectories
     [filePicker setCanChooseFiles:true];
@@ -85,7 +85,7 @@ NSArray *usbArray;
         //The user clicked the okay button, so we need to set the file directory as the textbox text
         for (NSURL *url in [filePicker URLs]) {
             //url is the file path (I hope)
-            //How the fuck do I log shit god damn What the fuck is with all this NS shit
+            
             NSLog(@"The file path is: %@", url);
             
             //Well this kind of works I guess. The file URL looks like this shit: "file:///Users/User/Path/To/File.type" which is wrong so let's change that shit.
@@ -101,7 +101,7 @@ NSArray *usbArray;
                 
             }
             
-            //Now urlString shouldn't have the file:// part leggo
+            //Now urlString shouldn't have the file:// part
             //So let's set the editText to the file path
             [_pathText setStringValue:urlString];
             ISOLoc = urlString;
@@ -114,7 +114,8 @@ NSArray *usbArray;
 }
 - (IBAction)helpButton:(id)sender {
     
-    //Make a 'sheet' that explains what the user should do
+    //Make a dialog that explains what the user should do
+    //In the future this will direct to a web page with illustrated instructions
     NSWindow *window = _window;
     NSAlert *helpDialog = [[NSAlert alloc] init];
     [helpDialog addButtonWithTitle:@"OK"];
@@ -142,7 +143,7 @@ NSArray *usbArray;
         
         //It does have /dev/ so do nothing
         NSString *usbIdentifierFinal = usbIdentifier;
-        //[self unmountDisk:usbIdentifierFinal];
+        [self main:usbIdentifierFinal:ISOLoc];
         
     } else {
         
@@ -150,8 +151,7 @@ NSArray *usbArray;
         NSString *usbIdentifierFinal = [NSString stringWithFormat:@"/dev/%@", usbIdentifier];
         NSLog(usbIdentifierFinal);
         [self main:usbIdentifierFinal:ISOLoc];
-        //[self convertISO:ISOLoc];
-        //[self runDD:usbIdentifierFinal];
+        
         
         
     }
@@ -202,7 +202,7 @@ NSArray *usbArray;
     
 }
 - (IBAction)refreshUSBList:(id)sender {
-    
+    //When the user clicks refresh, the list should refresh
     NSString *diskutilOut;
     diskutilOut = [self USBList];
     [_textView setStringValue:diskutilOut];
