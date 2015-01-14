@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		D8149E7E1A5C9D4300D01B9E /* main.scpt in Resources */ = {isa = PBXBuildFile; fileRef = D8149E7D1A5C9D4300D01B9E /* main.scpt */; };
 		D82061E51A5B8B5700DA1C03 /* convertISO.scpt in Resources */ = {isa = PBXBuildFile; fileRef = D82061E31A5B8B5700DA1C03 /* convertISO.scpt */; };
+		D86F035E1A66CE8200AE88E0 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86F035D1A66CE8200AE88E0 /* Media.xcassets */; };
 		D88F90241A5A08E8005BDC8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D88F90231A5A08E8005BDC8A /* AppDelegate.m */; };
 		D88F90261A5A08E8005BDC8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D88F90251A5A08E8005BDC8A /* main.m */; };
 		D88F90291A5A08E8005BDC8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88F90281A5A08E8005BDC8A /* ViewController.m */; };
-		D88F902B1A5A08E8005BDC8A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88F902A1A5A08E8005BDC8A /* Images.xcassets */; };
 		D88F902E1A5A08E8005BDC8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88F902C1A5A08E8005BDC8A /* Main.storyboard */; };
 		D88F903A1A5A08E8005BDC8A /* BootMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D88F90391A5A08E8005BDC8A /* BootMacTests.m */; };
 		D88F90451A5B3629005BDC8A /* unmountDisk.scpt in Resources */ = {isa = PBXBuildFile; fileRef = D88F90441A5B3629005BDC8A /* unmountDisk.scpt */; };
@@ -31,6 +31,7 @@
 /* Begin PBXFileReference section */
 		D8149E7D1A5C9D4300D01B9E /* main.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.scpt; sourceTree = "<group>"; };
 		D82061E31A5B8B5700DA1C03 /* convertISO.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = convertISO.scpt; sourceTree = "<group>"; };
+		D86F035D1A66CE8200AE88E0 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		D88F901D1A5A08E8005BDC8A /* BootMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BootMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88F90211A5A08E8005BDC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D88F90221A5A08E8005BDC8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		D88F90251A5A08E8005BDC8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D88F90271A5A08E8005BDC8A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D88F90281A5A08E8005BDC8A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D88F902A1A5A08E8005BDC8A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D88F902D1A5A08E8005BDC8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D88F90331A5A08E8005BDC8A /* BootMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BootMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88F90381A5A08E8005BDC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,6 +67,7 @@
 		D88F90141A5A08E7005BDC8A = {
 			isa = PBXGroup;
 			children = (
+				D86F035D1A66CE8200AE88E0 /* Media.xcassets */,
 				D88F901F1A5A08E8005BDC8A /* BootMac */,
 				D88F90361A5A08E8005BDC8A /* BootMacTests */,
 				D88F901E1A5A08E8005BDC8A /* Products */,
@@ -90,7 +91,6 @@
 				D88F90231A5A08E8005BDC8A /* AppDelegate.m */,
 				D88F90271A5A08E8005BDC8A /* ViewController.h */,
 				D88F90281A5A08E8005BDC8A /* ViewController.m */,
-				D88F902A1A5A08E8005BDC8A /* Images.xcassets */,
 				D88F902C1A5A08E8005BDC8A /* Main.storyboard */,
 				D88F90201A5A08E8005BDC8A /* Supporting Files */,
 			);
@@ -213,10 +213,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D88F902B1A5A08E8005BDC8A /* Images.xcassets in Resources */,
 				D88F90451A5B3629005BDC8A /* unmountDisk.scpt in Resources */,
 				D88F902E1A5A08E8005BDC8A /* Main.storyboard in Resources */,
 				D8149E7E1A5C9D4300D01B9E /* main.scpt in Resources */,
+				D86F035E1A66CE8200AE88E0 /* Media.xcassets in Resources */,
 				D82061E51A5B8B5700DA1C03 /* convertISO.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
