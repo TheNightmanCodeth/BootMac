@@ -685,26 +685,6 @@
                                     <action selector="iso:" target="XfG-lQ-9wD" id="ktO-yE-kbi"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="Tfv-GN-eiJ">
-                                <rect key="frame" x="260" y="19" width="122" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
-                                <buttonCell key="cell" type="roundRect" title="Start" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4JE-VE-ijH">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="cellTitle"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="startButton:" target="XfG-lQ-9wD" id="f3V-7L-Z97"/>
-                                </connections>
-                            </button>
-                            <textField verticalHuggingPriority="750" id="8R5-yY-qzz">
-                                <rect key="frame" x="20" y="175" width="603" height="267"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="OBI-eB-YVS">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Wfv-Ix-fLO">
                                 <rect key="frame" x="18" y="505" width="607" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -775,6 +755,50 @@
                                     <action selector="pathField:" target="XfG-lQ-9wD" id="m9q-ls-g2n"/>
                                 </connections>
                             </textField>
+                            <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="3PB-jj-NKM">
+                                <rect key="frame" x="390" y="21" width="16" height="16"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </progressIndicator>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="6fY-dO-cti">
+                                <rect key="frame" x="20" y="175" width="599" height="267"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <clipView key="contentView" id="epS-zW-YOv">
+                                    <rect key="frame" x="1" y="1" width="223" height="133"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="LRR-EL-dwK">
+                                            <rect key="frame" x="0.0" y="0.0" width="223" height="133"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="597" height="265"/>
+                                            <size key="maxSize" width="597" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="597" height="265"/>
+                                            <size key="maxSize" width="597" height="10000000"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="ivR-Zk-P7a">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="xyT-09-lIe">
+                                    <rect key="frame" x="224" y="1" width="15" height="133"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" id="Tfv-GN-eiJ">
+                                <rect key="frame" x="259" y="19" width="122" height="19"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="roundRect" title="Start" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4JE-VE-ijH">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="startButton:" target="XfG-lQ-9wD" id="f3V-7L-Z97"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -784,8 +808,10 @@
                         <outlet property="pathField" destination="X8l-N1-8C0" id="RXl-we-WVm"/>
                         <outlet property="pathText" destination="X8l-N1-8C0" id="UqS-QM-BhA"/>
                         <outlet property="refreshButton" destination="3dH-Mj-MUE" id="Mn6-Ul-QfE"/>
+                        <outlet property="scrollText" destination="6fY-dO-cti" id="x3W-G5-zNI"/>
+                        <outlet property="scrollTextView" destination="LRR-EL-dwK" id="Rip-rZ-N3r"/>
+                        <outlet property="spinner" destination="3PB-jj-NKM" id="V3u-mo-bKG"/>
                         <outlet property="text" destination="MX7-Zm-Am1" id="XWj-FD-xkS"/>
-                        <outlet property="textView" destination="8R5-yY-qzz" id="nH9-Vw-gTz"/>
                         <outlet property="usbIndentifierBox" destination="hYW-dk-Ksu" id="i9D-Xc-sn0"/>
                         <outlet property="usbText" destination="4dI-tR-d1E" id="eyl-YM-chG"/>
                         <outlet property="welcomeText" destination="Wfv-Ix-fLO" id="qIp-dJ-v15"/>

@@ -17,7 +17,7 @@ NSArray *usbArray;
     [_usbIndentifierBox setPlaceholderString:@"Usb identifier..."];
     NSString *diskutilOut;
     diskutilOut = [self USBList];
-    [_textView setStringValue:diskutilOut];
+    [_scrollTextView setString:diskutilOut];
     // Do any additional setup after loading the view.
     [_welcomeText setBezeled:NO];
     [_welcomeText setDrawsBackground:NO];
@@ -36,6 +36,12 @@ NSArray *usbArray;
     [_usbText setEditable:NO];
     [_usbText setSelectable:NO];
     [_usbText setStringValue:@"Lastly, type the name of your usb identifier. ie. 'disk1' or 'disk2'"];
+    
+    [_spinner setBezeled:YES];
+    [_spinner setStyle:NSProgressIndicatorSpinningStyle];
+    [_spinner setControlSize:NSSmallControlSize];
+    [_spinner sizeToFit];
+    [_spinner setUsesThreadedAnimation:YES];
     
 }
 - (void)setRepresentedObject:(id)representedObject {
@@ -135,6 +141,8 @@ NSArray *usbArray;
 }
 - (IBAction)startButton:(id)sender {
     
+    [_spinner startAnimation:self];
+    
     NSString *usbIdentifier = [_usbIndentifierBox stringValue];
     
     //check if the user entered /dev/ in front of the identifier. If not, add it
@@ -152,11 +160,10 @@ NSArray *usbArray;
         NSLog(usbIdentifierFinal);
         [self main:usbIdentifierFinal:ISOLoc];
         
-        
-        
     }
-
     
+    [_spinner stopAnimation:self];
+
     
 }
 - (void)main:(NSString *)usb :(NSString *)iso{
@@ -201,11 +208,12 @@ NSArray *usbArray;
     }
     
 }
+
 - (IBAction)refreshUSBList:(id)sender {
     //When the user clicks refresh, the list should refresh
     NSString *diskutilOut;
     diskutilOut = [self USBList];
-    [_textView setStringValue:diskutilOut];
+    [_scrollTextView setString:diskutilOut];
     
 }
 
