@@ -42,6 +42,7 @@ NSArray *usbArray;
     [_spinner setControlSize:NSSmallControlSize];
     [_spinner sizeToFit];
     [_spinner setUsesThreadedAnimation:YES];
+    [_spinner setDisplayedWhenStopped:NO];
     
 }
 - (void)setRepresentedObject:(id)representedObject {
@@ -51,7 +52,7 @@ NSArray *usbArray;
 }
 - (NSString *)USBList{
     
-    int pid = [[NSProcessInfo processInfo] processIdentifier];
+    //int pid = [[NSProcessInfo processInfo] processIdentifier];
     NSPipe *pipe = [NSPipe pipe];
     NSFileHandle *file = pipe.fileHandleForReading;
     
@@ -112,8 +113,6 @@ NSArray *usbArray;
             [_pathText setStringValue:urlString];
             ISOLoc = urlString;
             //This string is the ouput from running 'diskutil list'
-            NSString *usbReturn = [self USBList];
-
         }
     }
     
@@ -134,7 +133,7 @@ NSArray *usbArray;
 }
 - (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
     
-    if (returnCode == NSOKButton) {
+    if (returnCode == NSModalResponseOK) {
         NSLog(@"OKButton clicked");
     }
     
